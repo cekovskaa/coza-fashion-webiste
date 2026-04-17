@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import "../styles/bootstrap.min.css";
 import "../styles/util.css";
 import "../styles/main.css";
+import "../styles/coza-header.css";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });

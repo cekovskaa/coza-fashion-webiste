@@ -1,0 +1,290 @@
+/* Mobile / tablet masthead & drawer — works with Bootstrap lg (992px) breakpoint */
+
+.coza-mobile-masthead {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .coza-mobile-masthead {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1100;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  }
+
+  .coza-topbar-compact {
+    background-color: #222;
+    min-height: 32px;
+  }
+
+  .coza-topbar-single-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-height: 34px;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .coza-topbar-ellipsis-text {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #b2b2b2;
+  }
+
+  .coza-topbar-compact .left-top-bar {
+    margin: 0;
+  }
+
+  .coza-topbar-right a {
+    font-family: Poppins-Regular, sans-serif;
+    font-size: 9px;
+    line-height: 1.4;
+    color: #b2b2b2;
+    white-space: nowrap;
+    padding: 2px 6px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .coza-topbar-right a:first-of-type {
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .coza-topbar-right a:hover {
+    color: #6c7ae0;
+  }
+
+  .coza-mobile-toolbar-row.wrap-header-mobile {
+    height: auto;
+    min-height: 56px;
+    padding: 10px 14px;
+    box-shadow: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .coza-mobile-toolbar-two {
+    justify-content: space-between;
+  }
+
+  .coza-icon-btn {
+    color: #333;
+    border: none;
+    background: transparent;
+    line-height: 1;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .coza-icon-btn:hover,
+  .coza-icon-btn:focus-visible {
+    color: #717fe0;
+    background: rgba(113, 127, 224, 0.08);
+  }
+
+  .coza-mobile-nav-drawer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 1095;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .coza-drawer-inner {
+    padding: 20px 24px 40px;
+    max-width: 100%;
+  }
+
+  .coza-drawer-logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .coza-drawer-logo img {
+    max-height: 36px;
+    width: auto;
+    max-width: 180px;
+  }
+
+  .coza-drawer-nav .coza-drawer-link {
+    display: block;
+    font-family: Poppins-Medium, Poppins-Regular, sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #222;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .coza-drawer-nav .coza-drawer-link:hover,
+  .coza-drawer-nav .coza-drawer-link:focus-visible {
+    color: #717fe0;
+  }
+
+  .coza-drawer-nav li.active-menu .coza-drawer-link {
+    color: #717fe0;
+  }
+}
+
+/* Mobile: smallest screens (320px) — compact top bar */
+@media (max-width: 320px) {
+  .coza-topbar-ellipsis-text {
+    font-size: 9px;
+    line-height: 1.35;
+  }
+
+  .coza-topbar-right a {
+    font-size: 8px;
+    padding: 2px 3px;
+  }
+
+  .coza-topbar-single-row {
+    gap: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+/* Mobile: 321px–425px — slightly larger top bar text */
+@media (min-width: 321px) and (max-width: 425px) {
+  .coza-topbar-ellipsis-text {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .coza-topbar-right a {
+    font-size: 9px;
+    padding: 2px 5px;
+  }
+}
+
+/* Phone: shared layout below 425px (toolbar + drawer) */
+@media (max-width: 425px) {
+  .coza-mobile-toolbar-row.wrap-header-mobile {
+    min-height: 52px;
+    padding: 8px 10px;
+  }
+
+  .coza-icon-btn {
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 18px;
+  }
+
+  .coza-drawer-nav .coza-drawer-link {
+    font-size: 14px;
+    padding: 14px 0;
+  }
+
+  .coza-drawer-inner {
+    padding: 16px 18px 32px;
+  }
+}
+
+/* Tablet: 426px–768px — larger top bar (from “425px tablet” breakpoint upward) */
+@media (min-width: 426px) and (max-width: 768px) {
+  .coza-topbar-compact {
+    min-height: 38px;
+  }
+
+  .coza-topbar-ellipsis-text {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .coza-topbar-right a {
+    font-size: 11px;
+    line-height: 1.45;
+    padding: 3px 9px;
+  }
+
+  .coza-topbar-single-row {
+    gap: 10px;
+    min-height: 38px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .coza-mobile-toolbar-row.wrap-header-mobile {
+    min-height: 64px;
+    padding: 12px 18px;
+  }
+
+  .coza-icon-btn {
+    font-size: 20px;
+  }
+
+  .coza-drawer-nav .coza-drawer-link {
+    font-size: 16px;
+    padding: 18px 0;
+  }
+
+  .coza-drawer-logo img {
+    max-height: 40px;
+  }
+}
+
+/* Large tablet / small laptop header: 769px–991px */
+@media (min-width: 769px) and (max-width: 991px) {
+  .coza-topbar-compact {
+    min-height: 40px;
+  }
+
+  .coza-topbar-ellipsis-text {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .coza-topbar-right a {
+    font-size: 12px;
+    padding: 3px 11px;
+  }
+
+  .coza-mobile-toolbar-row.wrap-header-mobile {
+    min-height: 64px;
+    padding: 12px 20px;
+  }
+
+  .coza-icon-btn {
+    font-size: 20px;
+  }
+
+  .coza-drawer-nav .coza-drawer-link {
+    font-size: 16px;
+    padding: 18px 0;
+  }
+
+  .coza-drawer-logo img {
+    max-height: 42px;
+  }
+
+  .coza-drawer-inner {
+    padding-left: max(24px, 5vw);
+    padding-right: max(24px, 5vw);
+  }
+}
