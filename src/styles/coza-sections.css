@@ -1,0 +1,26 @@
+/* Store Overview & Our Blogs: centered column on mobile & tablet (≤991px) */
+
+@media (max-width: 991px) {
+  section.sec-product.coza-store-overview,
+  section.sec-blog.coza-blog-overview {
+    width: 90%;
+    max-width: 100%;
+    margin-inline: auto;
+    box-sizing: border-box;
+  }
+
+  section.sec-product.coza-store-overview {
+    /* override util .p-b-50 on small screens */
+    padding-bottom: 0 !important;
+  }
+
+  /* Our Blogs section: less bottom padding than desktop .p-b-90 (90px) */
+  section.sec-blog.coza-blog-overview {
+    padding-bottom: 40px !important;
+  }
+
+  /* Blog card wrapper: .p-b-63 (63px) → 33px on mobile & tablet */
+  .coza-blog-item.p-b-63 {
+    padding-bottom: 33px !important;
+  }
+}

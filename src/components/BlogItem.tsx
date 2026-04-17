@@ -8,7 +8,7 @@ interface BlogItemProps {
 
 const BlogItem: React.FC<BlogItemProps> = ({ blog }) => {
   return (
-    <div className="p-b-63 d-block">
+    <div className="coza-blog-item p-b-63 d-block">
       <Link href={`/blog/${blog.id}`} className="hov-img0 how-pos5-parent">
         <img src={blog.img} alt={blog.title} />
       </Link>
