@@ -22,11 +22,6 @@ Shop by audience, filter the catalog, read product and article detail pages, and
 - **Bootstrap 5** and custom CSS 
 - **Font Awesome** & icon fonts 
 
-## Prerequisites
-
-- [Node.js](https://nodejs.org/) 
-- npm (comes with Node)
-
 ## Getting Started
 
 You need **two terminals**: one for the app, one for the API server.
