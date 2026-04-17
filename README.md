@@ -24,7 +24,7 @@ Shop by audience, filter the catalog, read product and article detail pages, and
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) (LTS recommended, e.g. 18+)
+- [Node.js](https://nodejs.org/) 
 - npm (comes with Node)
 
 ## Getting Started
