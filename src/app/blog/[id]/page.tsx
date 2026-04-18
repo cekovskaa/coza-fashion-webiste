@@ -44,7 +44,7 @@ export default function BlogDetail() {
     <>
       <PageTitle title={blog?.title || "Blog"} />
 
-      <section className="bg0 p-t-52 p-b-20">
+      <section className="coza-blog-detail bg0 p-t-52 p-b-20">
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-lg-9 p-b-80">

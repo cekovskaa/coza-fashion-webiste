@@ -65,6 +65,9 @@ export default function Search() {
     fetchSearchResults();
   }, [query]);
 
+  const blogColClass =
+    "col-12 col-sm-6 col-md-4 col-lg-3 p-b-35 coza-search-blog-col";
+
   const renderLoadingSkeleton = (
     type: "blog" | "product",
     count: number = 3
@@ -73,13 +76,13 @@ export default function Search() {
       <div
         key={index}
         className={
-          type === "blog" ? "col-4" : "col-sm-6 col-md-4 col-lg-3 p-b-35"
+          type === "blog" ? blogColClass : "col-sm-6 col-md-4 col-lg-3 p-b-35"
         }
       >
-        <div className="animate-pulse">
-          <div className="bg-gray-300 h-48 w-full mb-4 rounded"></div>
-          <div className="bg-gray-300 h-4 w-3/4 mb-2 rounded"></div>
-          <div className="bg-gray-300 h-4 w-1/2 rounded"></div>
+        <div className="coza-search-skeleton-pulse">
+          <div className="coza-search-skeleton-bar coza-search-skeleton-bar--hero" />
+          <div className="coza-search-skeleton-bar coza-search-skeleton-bar--line" />
+          <div className="coza-search-skeleton-bar coza-search-skeleton-bar--short" />
         </div>
       </div>
     ));
@@ -101,7 +104,7 @@ export default function Search() {
 
       <PageTitle title="Search" />
 
-      <div className="bg0 m-t-23 p-b-140 mt-5">
+      <div className="coza-search-page bg0 m-t-23 mt-5">
         <div className="container">
           {error && (
             <div className="alert alert-danger mb-4">
@@ -119,11 +122,11 @@ export default function Search() {
                 <>
                   <div className="mb-5">
                     <h2 className="mb-5">Blogs</h2>
-                    <div className="row isotope-grid">
+                    <div className="row isotope-grid g-3 g-md-4 justify-content-center justify-content-sm-start">
                       {isLoading
                         ? renderLoadingSkeleton("blog")
                         : blogs.map((blog) => (
-                            <div key={blog.id} className="col-4">
+                            <div key={blog.id} className={blogColClass}>
                               <BlogItem blog={blog} />
                             </div>
                           ))}
@@ -132,7 +135,7 @@ export default function Search() {
 
                   <div className="mb-5">
                     <h2 className="mb-5">Products</h2>
-                    <div className="row isotope-grid">
+                    <div className="row isotope-grid g-3 g-md-4 justify-content-center justify-content-sm-start">
                       {isLoading
                         ? renderLoadingSkeleton("product", 4)
                         : products.map((product) => (
@@ -146,11 +149,11 @@ export default function Search() {
               {showOnlyBlogs && (
                 <div className="mb-5">
                   <h2 className="mb-5">Blogs</h2>
-                  <div className="row isotope-grid">
+                  <div className="row isotope-grid g-3 g-md-4 justify-content-center justify-content-sm-start">
                     {isLoading
                       ? renderLoadingSkeleton("blog")
                       : blogs.map((blog) => (
-                          <div key={blog.id} className="col-4">
+                          <div key={blog.id} className={blogColClass}>
                             <BlogItem blog={blog} />
                           </div>
                         ))}
@@ -161,7 +164,7 @@ export default function Search() {
               {showOnlyProducts && (
                 <div className="mb-5">
                   <h2 className="mb-5">Products</h2>
-                  <div className="row isotope-grid">
+                  <div className="row isotope-grid g-3 g-md-4 justify-content-center justify-content-sm-start">
                     {isLoading
                       ? renderLoadingSkeleton("product", 4)
                       : products.map((product) => (
@@ -179,7 +182,7 @@ export default function Search() {
 
               {!isLoading && !hasBlogs && !hasProducts && (
                 <div className="text-center p-5">
-                  <p>No results for "{query}"</p>
+                  <p>No results for &quot;{query}&quot;</p>
                 </div>
               )}
             </>

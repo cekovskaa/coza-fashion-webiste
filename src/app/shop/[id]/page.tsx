@@ -48,7 +48,7 @@ const ShopDetailPage = async ({ params }: ShopDetailProps) => {
 
                 <p className="stext-102 cl3 p-t-23">{product.description}</p>
 
-                <div className="flex-w flex-m p-l-100 p-t-40 respon7">
+                <div className="flex-w flex-m coza-product-detail-actions">
                   <div className="flex-m bor9 p-r-10 m-r-11">
                     <a
                       href="#"
@@ -89,7 +89,7 @@ const ShopDetailPage = async ({ params }: ShopDetailProps) => {
 
           <div className="bor10 m-t-50 p-t-43 p-b-40">
             <div className="tab01">
-              <div className="tab-content p-t-43">
+              <div className="tab-content">
                 <div
                   className="tab-pane fade show active"
                   id="description"

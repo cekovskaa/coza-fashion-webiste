@@ -60,7 +60,7 @@ export default function Shop() {
 
   return (
     <>
-      <div className="bg0 m-t-23 p-b-140">
+      <div className="coza-shop-page bg0 m-t-23 p-b-140">
         <div className="container">
           <div className="flex-w flex-l-m filter-tope-group m-tb-10 p-b-32">
             {["all", "women", "man"].map((cat) => (
@@ -83,7 +83,7 @@ export default function Shop() {
             ))}
           </div>
 
-          <div className="w-100 p-b-52">
+          <div className="coza-shop-search-wrap p-b-52">
             <div className="panel-search p-t-10 p-b-15">
               <div className="bor8 dis-flex p-l-15">
                 <button

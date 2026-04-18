@@ -36,7 +36,7 @@ export default function About() {
 
       <PageTitle title="About" />
 
-      <section className="bg0 p-t-75 p-b-120">
+      <section className="coza-about-page bg0 p-t-75 p-b-120">
         <div className="container">
           <div className="row p-b-148">
             <div className="col-md-7 col-lg-8">

@@ -59,7 +59,7 @@ export default function Blog() {
       <section className="bg0 p-t-62 p-b-60">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 col-lg-9 p-b-80">
+            <div className="col-md-8 col-lg-9 p-b-80 order-2 order-md-1">
               <div className="p-r-45 p-r-0-lg">
                 {blogs.map((blog) => (
                   <div key={blog.id} className="m-b-50">
@@ -75,7 +75,7 @@ export default function Blog() {
               </div>
             </div>
 
-            <div className="col-md-4 col-lg-3 p-b-80">
+            <div className="col-md-4 col-lg-3 p-b-80 order-1 order-md-2">
               <div className="side-menu">
                 <form
                   className="bor17 of-hidden pos-relative"

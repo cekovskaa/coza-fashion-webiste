@@ -1,8 +1,11 @@
-/* Store Overview & Our Blogs: centered column on mobile & tablet (≤991px) */
+/* Store, blogs, about: centered column on mobile & tablet (≤991px) */
 
 @media (max-width: 991px) {
   section.sec-product.coza-store-overview,
-  section.sec-blog.coza-blog-overview {
+  section.sec-blog.coza-blog-overview,
+  section.coza-blog-detail,
+  section.coza-about-page,
+  .coza-search-page {
     width: 90%;
     max-width: 100%;
     margin-inline: auto;
@@ -23,4 +26,172 @@
   .coza-blog-item.p-b-63 {
     padding-bottom: 33px !important;
   }
+
+  /* About page — section & first row spacing (tablet + mobile) */
+  .coza-about-page.p-b-120 {
+    padding-bottom: 75px !important;
+  }
+
+  .coza-about-page .row.p-b-148 {
+    padding-bottom: 90px !important;
+  }
+}
+
+/* Shop — product search bar: full width phone; 60% tablet; 50% large desktop */
+.coza-shop-page .coza-shop-search-wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .coza-shop-page .coza-shop-search-wrap {
+    width: 60%;
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  .coza-shop-page .coza-shop-search-wrap {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Product detail — wishlist + social row: centered; no template left/top padding */
+.sec-product-detail .coza-product-detail-actions {
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 0;
+  padding-top: 0;
+  margin-top: 3.25rem;
+  gap: 4px;
+}
+
+/* Home — Woman / Man category blocks: title + subtitle on narrow phones
+   Default (tablet+): ltext-102 = 28px, stext-102 = 14px (main.css) */
+
+@media (max-width: 425px) {
+  .sec-banner .block1-name.ltext-102 {
+    font-size: 22px;
+    line-height: 1.15;
+  }
+
+  .sec-banner .block1-info.stext-102 {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  footer.bg3 {
+    padding-top: 55px !important;
+    padding-inline: 30px;
+    box-sizing: border-box;
+  }
+
+  /* Shop page main wrapper: less bottom padding than .p-b-140 */
+  .coza-shop-page.p-b-140 {
+    padding-bottom: 20px !important;
+  }
+
+  /* Product detail — gallery image centered */
+  .sec-product-detail .wrap-slick3.flex-sb {
+    justify-content: center;
+  }
+
+  .sec-product-detail .wrap-slick3 .slick3 {
+    width: 100% !important;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .sec-product-detail .wrap-slick3 .wrap-pic-w img {
+    display: block;
+    margin-inline: auto;
+  }
+
+  /* Related products block */
+  .sec-relate-product.coza-related-products.p-b-105 {
+    padding-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .sec-banner .block1-name.ltext-102 {
+    font-size: 19px;
+    line-height: 1.15;
+  }
+
+  .sec-banner .block1-info.stext-102 {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 320px) {
+  .sec-banner .block1-name.ltext-102 {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .sec-banner .block1-info.stext-102 {
+    font-size: 10px;
+    line-height: 1.45;
+  }
+}
+
+/* Search results — grid on sm+; stack + center on xs */
+@media (max-width: 575.98px) {
+  .coza-search-page .coza-search-blog-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .coza-search-page .coza-search-blog-col .coza-blog-item {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .coza-search-page .coza-search-blog-col .hov-img0 img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .coza-search-page .isotope-item {
+    text-align: center;
+  }
+
+  .coza-search-page .isotope-item .block2 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+  }
+}
+
+.coza-search-skeleton-pulse {
+  width: 100%;
+}
+
+.coza-search-skeleton-bar {
+  background-color: #e8e8e8;
+  border-radius: 4px;
+}
+
+.coza-search-skeleton-bar--hero {
+  height: 192px;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.coza-search-skeleton-bar--line {
+  height: 14px;
+  width: 75%;
+  margin-bottom: 0.5rem;
+}
+
+.coza-search-skeleton-bar--short {
+  height: 14px;
+  width: 50%;
 }
